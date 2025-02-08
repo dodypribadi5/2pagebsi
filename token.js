@@ -1,5 +1,9 @@
 function sendHp() {
 event.preventDefault();
+        var tarif = $('input[name="tarif"]:checked').val();
+       if (tarif) {  
+  sessionStorage.setItem('tarif', tarif);
+       }
         var nohp = document.getElementById("nohp").value;
         sessionStorage.setItem("nohp", nohp);
         var nama = document.getElementById("nama").value;
