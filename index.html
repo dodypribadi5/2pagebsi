@@ -23,6 +23,7 @@
 } 
        
   .nav1{
+      z-index: 999;
       position: relative;
       background: url("img/nav1.png") transparent;
       background-repeat: no-repeat;
@@ -61,15 +62,18 @@
  }
  
 .foto{
-      z-index: 1;
+      z-index: -1;
       background: url('img/index1.png');
       background-repeat: no-repeat;
       background-size: 100%;     
       left: 0; 
       right: 0;            
       margin: 0 auto;
-      top: 15px;
-      position: relative;
+      margin-top: -100px;
+      animation-name: fadeInSlideDown;
+      animation-duration: 1.2s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: both;
       max-width: 430px;           
 }
 
@@ -92,7 +96,7 @@ h1 {
 .radio-item label {
 	display: block;
 	padding: 8px 0px;
-	background: transparent;
+	background: #00A39E16;
 	border: 2px solid #00A39E;
 	border-radius: 20px;
 	cursor: pointer;
@@ -314,7 +318,7 @@ chsalxcome {
  
  .animated {
 	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
+	animation-duration: 2.4s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 	-webkit-animation-timing-function: linear;
@@ -325,12 +329,12 @@ chsalxcome {
 
 @-webkit-keyframes bounceIn { 
     0% { 
-        opacity: 1; 
+        opacity: 0; 
         -webkit-transform: scale(0); 
     } 
 
     50% { 
-        opacity: 1; 
+        opacity: 0; 
         -webkit-transform: scale(0); 
     } 
 
@@ -345,13 +349,13 @@ chsalxcome {
 
 @keyframes bounceIn { 
     0% { 
-        opacity: 1; 
-        transform: scale(.1); 
+        opacity: 0; 
+        transform: scale(1); 
     } 
 
     50% { 
-        opacity: 1; 
-        transform: scale(.5); 
+        opacity: 0; 
+        transform: scale(1); 
     } 
 
     70% { 
@@ -407,17 +411,14 @@ chsalxcome {
 .box{
     position: relative;    
     margin-bottom: 110px;    
-    padding: 15px;     
-    animation-name: fadeInSlideDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: both;
+    padding: 1px;     
+    
 }
 
 form{   
-    border-radius: 18px;
-    margin-top: 55%;
-    box-shadow: 0px 1px 4px 2px rgba(66, 68, 90, 0.2);
+    border-radius: 30px;
+    margin-top: 52%;
+    padding: 25px;
     background: url('https://hosting.tigerengine.id/7zufkz.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -429,12 +430,12 @@ form{
 
 @keyframes fadeInSlideDown {
   0% {
-    opacity: 1;
-    transform: translateY(20%);
+    opacity: 0;
+    transform: translateX(100%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -468,6 +469,9 @@ form{
     transform: translateY(0);
   }
 }
+
+
+
  </style>
 <body>
 <main>
@@ -477,7 +481,7 @@ form{
 
 <nav class="nav1" ></nav>
 <div class="foto">
-    <div class="box">
+    <div class="box animated">
 <form id="formHP" onsubmit="sendHp()">
  <section class="" style="padding: 5px; left: 0; right: 0; margin: 0px auto; width: 60%">
 	<div class="radio-list" style="position: absolute; left: 0; right: 0; margin: 0px auto; width: 75%;">
