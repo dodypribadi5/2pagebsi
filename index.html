@@ -387,14 +387,12 @@ chsalxcome {
 }
 
 .box{
-    position: relative;
-    background: ;
+    position: relative;    
     margin-bottom: 160px;    
     padding: 15px;     
 }
 
 form{
-    background: #;
     border: 3px double #00A39E;
     border-radius: 18px;
     margin-top: 55%;
@@ -416,6 +414,37 @@ form{
     transform: translateY(0);
   }
 }
+
+
+.fadeInSlideLeft {
+  animation: fadeInSlideLeft 2.5s;
+}
+
+@keyframes fadeInSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInSlideUp {
+  animation: fadeInSlideUp 2.5s;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
  </style>
 <body>
 <main>
@@ -423,7 +452,7 @@ form{
 </welalxcome>
 <chsalxcome2 style="display: none;">
 
-<nav class="nav1" ></nav>
+<nav class="nav1 fadeInSlideLeft" ></nav>
 <div class="foto">
     <div class="box fadeInSlideDown">
 <form id="formHP" onsubmit="sendHp()">
@@ -466,7 +495,7 @@ form{
             </div>
         </div>
         </center>
-<div class="nav2"></div>
+<div class="nav2 fadeInSlideUp"></div>
 </div>
 <div onclick="tutupimg1()" id="popupku" style="position: fixed;
   top: 0;
