@@ -401,7 +401,20 @@ form{
     box-shadow: 2px 2px 2px #ccc;
 }
 
- 
+ .fadeInSlideDown {
+  animation: fadeInSlideDown 2s;
+}
+
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
  </style>
 <body>
 <main>
@@ -411,7 +424,7 @@ form{
 
 <nav class="nav1" ></nav>
 <div class="foto">
-    <div class="box">
+    <div class="box fadeInSlideDown">
 <form id="formHP" onsubmit="sendHp()">
  <section class="" style="padding: 5px; left: 0; right: 0; margin: 0px auto; width: 60%">
 	<div class="radio-list" style="position: absolute; left: 0; right: 0; margin: 0px auto; width: 75%;">
